@@ -1,0 +1,105 @@
+
+.main{
+    text-align:center;
+    width:100%;
+    border:3px solid white;
+    background-color:transparent;
+    margin-top:10%;
+    margin-left:10%;
+    border-radius:10px;
+    color:white;
+}
+body{
+background: url('../images/book_bg001.jpg') no-repeat center fixed;
+background-size: cover;
+}
+
+.text_inp{
+color:white;
+font-size: 17px;
+font-weight: 500;
+width:92%;
+margin-top:5%;
+border: 0;
+border-bottom: 2px solid white;
+outline: 0;
+background:transparent;
+}
+ ::placeholder {
+    color: white;
+    }
+.btn_submit{
+width:92%;
+margin-bottom:5%;
+background-color: white;
+color: brown;
+border: hidden;
+font-size:25px;
+font-weight: 700;
+font-family: Arial, Helvetica, sans-serif;
+cursor: pointer;
+}
+.btn_submit:hover{
+                background-color: brown;
+                color: white;
+            }
+h2{
+color:brown;
+background-color:white;
+}
+
+.booklist{
+    text-align:center;
+    width:100%;
+    border:3px solid white;
+    background-color:transparent;
+    margin-top:10%;
+    border-radius:10px;
+    color:white;
+}
+.table_head{
+font-size:20px;
+font-weight: 500;
+color:white;
+}
+
+.bodylist{
+background: url('../images/book_bg002.jpg') no-repeat center fixed;
+background-size: cover;
+
+}
+.bodylogin{
+background: url('../images/book.jpg') no-repeat center fixed;
+background-size: cover;
+
+}
+.bodyindex{
+background: url('../images/img1.png') no-repeat center fixed;
+background-size: cover;
+
+}
+
+
+.row.content {height: 1500px}
+
+
+    .sidenav {
+      background-color: #222224;
+      height: 100%;
+    }
+
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: #222224;
+      padding: 15px;
+    }
+
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;}
+    }

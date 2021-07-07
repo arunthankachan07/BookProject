@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+</head>
+<body class="bodylist">
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="booklist">
+                <h2>Available books</h2><br><br>
+
+<div>
+    <a href="{%url 'createbook'%}" class="btn btn-success">Create New Book</a>
+     <a href="{%url 'userhome'%}" class="btn btn-success">Home</a>
+</div>
+<table class="table" style="color:white">
+
+    <tr>
+        <td class="table_head">Book Name</td>
+        <td class="table_head">Author</td>
+        <td class="table_head">Price</td>
+        <td class="table_head">Pages</td>
+        <td class="table_head">Category</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    {%for book in books%}
+    <tr>
+        <td>{{book.book_name}}</td>
+        <td>{{book.author}}</td>
+        <td>{{book.price}}</td>
+        <td>{{book.pages}}</td>
+        <td>{{book.category}}</td>
+
+        <td><a href="{%url 'detail' book.id%}" class="btn btn-success">View</a></td>
+
+        <td><a href="{%url 'tdelete' book.id%}" class="btn btn-danger">Delete</a></td>
+        <td><a href="{%url 'bookupdate' book.id%}" class="btn btn-success">Update</a></td>
+
+    </tr>
+
+    {% endfor %}
+</table>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

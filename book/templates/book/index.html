@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<link rel="stylesheet" href="{%static 'css/style.css'%}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body class="bodyindex">
+<form>
+{%csrf_token%}
+    </form>
+<!-------------------------------->
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav">
+      <h3 style="text-align:center;color:white">{{request.user}}'s Home</h3>
+
+<a href="{%url 'createbook'%}" class="btn btn-light" style="width:100%;margin-top:2%;font-size:25px;" >Create</a>
+
+<a href="{%url 'list' %}" class="btn btn-light" style="width:100%;margin-top:2%;font-size:25px;">List Book</a>
+
+<a href="{%url 'signout'%}" class="btn btn-light" style="width:100%;margin-top:2%;font-size:25px;">Logout</a>
+
+    </div>
+
+    <div class="col-sm-9">
+        <div class="row">
+            <div class="col-12">
+                <div style="background-color:#222224;">
+                    <h1 style="color:white;">Welcome {{request.user}}</h1>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
